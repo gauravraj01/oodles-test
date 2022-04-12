@@ -12,7 +12,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t $IMAGE_REPO_NAME:latest .
+      - docker build -t oodles-test:latest .
       - docker tag oodles-test:latest 240068248627.dkr.ecr.ap-south-1.amazonaws.com/oodles-test:latest      
   post_build:
     commands:
