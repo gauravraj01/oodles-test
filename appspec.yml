@@ -5,27 +5,27 @@ files:
     destination: /home/ubuntu/app
 hooks:
   ApplicationStop:
-    - location: deployment_script/stop_server.sh
+    - location: deployment_script/stop_server
       timeout: 300
       runas: root
       
   BeforeInstall:
-    - location: deployment_script/before_install.sh
+    - location: deployment_script/before_install
       timeout: 300
       runas: root
 
   AfterInstall:
-    - location: deployment_script/after_install.sh
+    - location: deployment_script/after_install
       timeout: 300
       runas: root
 
   ApplicationStart:
-    - location: deployment_script/start_server.sh
+    - location: deployment_script/start_server
       timeout: 300
       runas: root
 
   ValidateService:
-    - location: deployment_script/validate_service.sh
+    - location: deployment_script/validate_service
       timeout: 300
       runas: root
   
